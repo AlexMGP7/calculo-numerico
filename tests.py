@@ -49,7 +49,6 @@ class TestIntegracionNumerica(unittest.TestCase):
         test_func = lambda x: x * (x**2 + 1)**(1/2)  # Función de prueba como una función lambda
         resultado, error = integracion_trapecio(test_func, 0, 1, 1000)
         self.assertAlmostEqual(error, 0, delta=0.1, msg="Error relativo en Trapecio es demasiado alto")
-        print("Test de integración Trapecio pasó correctamente.")
 
 # Si el script se ejecuta directamente, corre las pruebas
 if __name__ == '__main__':
